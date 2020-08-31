@@ -73,6 +73,10 @@
   margin:0 auto;
 }
 
+body{
+  background-image:linear-gradient(-45deg, #dfdfdf 25%, #f9f8f7 25%, #f9f8f7 50%, #dfdfdf  50%, #dfdfdf 75%, #f9f8f7 75%, #f9f8f7);
+}
+
 /*スライドボタン*/
 .slide-btn{
   position: absolute;
@@ -98,8 +102,7 @@
 /*共通　スマホ*/
 @media screen and (max-width:798px){
   .inner{
-    width:100%;
-    margin:0 auto;
+  width:100%;
   }
 }
 
@@ -300,9 +303,12 @@ padding-left:50px;
 border-bottom:thick double slategray;
 }
 
+.profill-image {
+  width:300px;
+}
 
-.profill-main img{
-  width:20%;
+.profill-image img{
+  width:65%;
   height:auto;
 }
 
@@ -322,10 +328,43 @@ left:0;
  background-size: cover;
  width:800px;
  height:300px;
- opacity:0.4;
+ opacity:0.7;
  position: absolute;
  left:17%;
  z-index:-1;
+}
+
+/* sns*/
+/* アイコンをど真ん中に*/
+.flowbtn5 i{
+font-size:1.5em;
+color: white;
+}
+
+/* アイコンボタンにマウスホバーした時の指定*/
+.flowbtn5:hover{
+-webkit-transform:translateY(-5px);
+-ms-transform:translateY(-5px);
+transform:translateY(-5px);
+text-decoration:none;
+}
+/* ulタグの内側余白を０にする */
+ul.snsbtniti{
+padding:0!important;
+}
+/* アイコンボタン全体の位置 */
+.snsbtniti{
+display: flex;
+justify-content:center;
+flex-wrap: nowrap;
+align-items: center;
+margin-top:20px;
+}
+
+/* アイコンボタン同士の余白調整 */
+.snsbtniti a{
+flex:0 0 15%;
+text-align:center!important;
 }
 
 .profill-list{
@@ -337,6 +376,7 @@ margin:0 20px;
   font-size:18px;
   padding:10px 0;
   font-weight: bold;
+  color: white;
   font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 }
 
@@ -389,9 +429,13 @@ margin:0 20px;
   left:0;
   }
 
+  .profill-image {
+    width:100%;
+  }
+
   .main-image{
    width:100%;
-   height:330px;
+   height:360px;
    position: absolute;
    top:-10%;
    left:0%;
@@ -431,14 +475,12 @@ transition:all 0.9s 	ease;
 .webskill h1{
   font-size: 40px;
   font-weight:bold;
-  margin-bottom: 30px;
   text-align: left;
+  margin-bottom: 40px;
   font-family: 'Chalkboard SE',sans-serif;
   padding-left:50px;
   border-bottom:thick double slategray;
-
 }
-
 
 
 .web-list{
@@ -447,12 +489,14 @@ transition:all 0.9s 	ease;
   grid-template-columns: repeat(3, 320px);
   justify-content: center;
   align-items:center;
+
 }
 
 .web-list img{
   width:70%;
   object-fit: cover;
   height:180px;
+  border-radius: 50% 50%;
 }
 
 .web-list li{
@@ -481,6 +525,7 @@ align-self: center;
   .web-list img{
     width:60%;
     object-fit:contain;
+    border-radius: 20% 20%;
   }
 }
 
@@ -597,7 +642,7 @@ border-radius: 50px 50px;
 /*サービス　スマホ*/
 @media screen and (max-width:798px){
   .service{
-    height:800px;
+    height:830px;
     margin:20px auto;
 
   }
@@ -605,6 +650,7 @@ border-radius: 50px 50px;
   .service h1{
     text-align:center;
     padding: 0 0;
+    margin-bottom: 80px;
   }
 
   .service p{
@@ -614,14 +660,20 @@ border-radius: 50px 50px;
 
   .service1{
     position: static;
+    width:320px;
     height:250px;
     padding:20px 0;
     display: inline-block;
   }
 
+    .service1,.service2 p{
+      padding:0 0;
+    }
+
 
   .service2{
     position: static;
+    width:320px;
     height:250px;
     padding:20px 0;
     margin: 20px 0;
@@ -630,6 +682,7 @@ border-radius: 50px 50px;
 
   .service3{
     position: static;
+    width:320px;
     height:250px;
     padding:20px 0;
     display: inline-block;
@@ -639,7 +692,7 @@ border-radius: 50px 50px;
     width:100%;
     height:810px;
     position: absolute;
-    top:8%;
+    top:16%;
     left:0;
   }
 }
@@ -688,6 +741,7 @@ text-align:center;
 @media screen and (max-width:798px){
   .work{
     margin:50px 0;
+    margin-top: 120px;
   }
 
   .work h1{
@@ -701,6 +755,7 @@ text-align:center;
   }
 
   .work-image{
+    margin-top:0;
     margin-bottom: 80px;
   }
 
@@ -744,7 +799,7 @@ transition:all 0.9s 	ease;
   background-image: url("../image/gahag-0061149106-1.jpg");
  background-size: cover;
  background-repeat: no-repeat;
- opacity: 0.7;
+ opacity: 0.8;
  position: absolute;
  left:17%;
  z-index:-1;
