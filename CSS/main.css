@@ -75,6 +75,7 @@
 
 body{
   background-image:linear-gradient(-45deg, #dfdfdf 25%, #f9f8f7 25%, #f9f8f7 65%, #dfdfdf  50%, #dfdfdf 75%, #f9f8f7 75%, #f9f8f7);
+  overflow-x: hidden;
 }
 
 /*スライドボタン*/
