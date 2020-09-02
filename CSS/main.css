@@ -74,7 +74,7 @@
 }
 
 body{
-  background-image:linear-gradient(-45deg, #dfdfdf 25%, #f9f8f7 25%, #f9f8f7 50%, #dfdfdf  50%, #dfdfdf 75%, #f9f8f7 75%, #f9f8f7);
+  background-image:linear-gradient(-45deg, #dfdfdf 25%, #f9f8f7 25%, #f9f8f7 65%, #dfdfdf  50%, #dfdfdf 75%, #f9f8f7 75%, #f9f8f7);
 }
 
 /*スライドボタン*/
@@ -108,31 +108,37 @@ body{
 
 
 /*ヘッダー*/
+.header{
+  position:relative;
+  z-index: 100;
+  width:100%;
+  height:65px;
+}
 
 .header-list{
   width:200px;
-  padding:10px 0;
-  position:absolute;
-  top:10%;
-  right:10%;
-  z-index: 100;
+  position: absolute;
+  bottom:5%;
+  left:20%;
+  display: flex;
   justify-content: space-between;
  align-items: center;
+
 }
 
 .header-list li {
   font-size:30px;
   font-weight:bold;
   font-family: 'Chalkduster',sans-serif;
-  padding:20px 20px;
-  color:white;
+  padding:0px 20px;
+  color:#336699;
   cursor: pointer;
 }
 
 
 .header-list li:hover{
 opacity:0.7;
- border-bottom: 2px solid white;
+ border-bottom: 2px solid black;
 }
 
 
@@ -140,6 +146,12 @@ opacity:0.7;
 
 /*スマホ　ヘッダー*/
 @media screen and (max-width:798px){
+  .header{
+width:0;
+height:0;
+position: static;
+  }
+
   .header-list{
     width:100%;
     height:auto;
@@ -157,6 +169,12 @@ opacity:0.7;
 
   .header-list li {
       color:black;
+      padding:20px 0;
+  }
+
+  .header-list li:hover{
+  opacity:0.7;
+   border-bottom: 0px;
   }
 
   /*ハンバーガーメニュー*/
@@ -338,8 +356,8 @@ left:0;
 /* sns*/
 /* アイコンをど真ん中に*/
 .flowbtn5 i{
-font-size:1.5em;
-color: white;
+font-size:1.6em;
+color:#000033;
 }
 
 /* アイコンボタンにマウスホバーした時の指定*/
@@ -359,7 +377,7 @@ display: flex;
 justify-content:center;
 flex-wrap: nowrap;
 align-items: center;
-margin-top:20px;
+margin:20px 0px;
 }
 
 /* アイコンボタン同士の余白調整 */
@@ -377,7 +395,7 @@ margin:0 20px;
   font-size:18px;
   padding:10px 0;
   font-weight: bold;
-  color: white;
+  color:white;
   font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
 }
 
@@ -398,7 +416,6 @@ margin:0 20px;
   background-color: #708090;
   padding:10px 30px;
   font-family: 'ヒラギノ角ゴ StdN','Hiragino Kaku Gothic StdN',sans-serif;
-
 }
 
 
@@ -436,7 +453,7 @@ margin:0 20px;
 
   .main-image{
    width:100%;
-   height:360px;
+   height:380px;
    position: absolute;
    top:-10%;
    left:0%;
@@ -450,6 +467,7 @@ margin:0 20px;
 
   .profill-list li{
     font-size:10px;
+      color:#000000;
   }
 
   .profill-list li:nth-of-type(1){
@@ -467,12 +485,12 @@ margin:0 20px;
 .webskill{
 text-align: center;
 margin:80px 0;
-opacity:0;
+transform: translateX(-120%);
 }
 
 .webskill.active{
-opacity:1;
-transition:all 0.9s 	ease;
+transform: translateX(0);
+transition:all 0.9s ease;
 }
 
 .webskill h1{
@@ -483,6 +501,12 @@ transition:all 0.9s 	ease;
   font-family: 'Chalkboard SE',sans-serif;
   padding-left:50px;
   border-bottom:thick double slategray;
+}
+
+.skill{
+  position: relative;
+  top:0;
+  left:0;
 }
 
 
@@ -508,6 +532,19 @@ font-weight:bold;
 align-self: center;
 }
 
+.skill-back-image{
+  background-image: url("../image/119567_transparent.png");
+  background-size:contain;
+  background-repeat: no-repeat;
+  background-position:center;
+  transform: rotate(45deg);
+  opacity: 0.4;
+  width:800px;
+  height:500px;
+  position: absolute;
+ top:0;
+  left:30%;
+}
 /*スキル　スマホ*/
 @media screen and (max-width:798px){
   .webskill{
@@ -530,6 +567,21 @@ align-self: center;
     object-fit:contain;
     border-radius: 20% 20%;
   }
+
+
+  .skill-back-image{
+    background-image: url("../image/119567_transparent.png");
+    background-size:contain;
+    background-repeat: no-repeat;
+    background-position:center;
+    transform: rotate(0);
+    opacity: 0.4;
+    width:400px;
+    height:400px;
+    position: absolute;
+   top:10%;
+    left:0;
+  }
 }
 
 /*サービス*/
@@ -541,11 +593,11 @@ align-self: center;
   left:0;
   height:750px;
   z-index:10;
-  opacity: 0;
+  transform: translateX(-120%);
 }
 
 .service.active{
-opacity:1;
+  transform: translateX(0);
 transition:all 0.9s 	ease;
 }
 
@@ -575,7 +627,7 @@ display: inline-block;
   line-height: 40px;
   font-size: 19px;
   font-weight: bold;
-  color:darkcyan;
+  color:	#0066CC;
   text-shadow: 2px 2px 0 white;
   font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
@@ -634,9 +686,9 @@ display: inline-block;
   left:0;
   z-index: -1;
 border-radius: 50px 50px;
- background-image: url("../image/M9A9004.jpg");
+ background-image: url("../image/publicdomainq-0014330uep.jpg");
  background-size: cover;
- background-position:right;
+ background-position:center;
  opacity: 0.4;
  width:1200px;
  height:670px;
