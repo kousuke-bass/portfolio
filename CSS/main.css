@@ -74,8 +74,9 @@
 }
 
 body{
-  background-image:linear-gradient(-45deg, #dfdfdf 25%, #f9f8f7 25%, #f9f8f7 65%, #dfdfdf  50%, #dfdfdf 75%, #f9f8f7 75%, #f9f8f7);
-  overflow-x: hidden;
+background-image:linear-gradient(-45deg, #DAE9EE 25%, #FFFEF9 25%, #FFFEF9 50%, #DAE9EE  50%, #DAE9EE 75%, #FFFEF9 75%, #FFFEF9);
+overflow-x: hidden;
+background-size: contain;
 }
 
 /*スライドボタン*/
@@ -106,7 +107,11 @@ body{
   width:100%;
   }
 }
-
+@media screen and (max-width:810px){
+  .inner{
+  width:100%;
+  }
+}
 
 /*ヘッダー*/
 .header{
@@ -243,7 +248,7 @@ position: static;
 .top{
   width:100%;
   height:500px;
-  background-image: url("../image/IMG_6525.JPG");
+  background-image: url("../image/5c50d366e451e49deaec050cc1084699.gif");
   background-size: cover;
   position: relative;
   top:0;
@@ -342,7 +347,7 @@ left:0;
 }
 
 .main-image{
- background-image:url("../image/gahag-0061149106-1.jpg");
+ background-image:url("../image/IMG_6525.JPG");
  background-position:bottom;
  background-repeat: no-repeat;
  background-size: cover;
@@ -963,6 +968,12 @@ font-family: 'Hannotate SC',sans-serif;}
 
 }
 
+@media screen and (max-width:798px){
+  .footer-title{
+font-size: 6px;
+  }
+}
+
 #page-top {
     position: fixed;
     bottom: 25px;
@@ -987,8 +998,54 @@ font-family: 'Hannotate SC',sans-serif;}
     opacity: 0.6;
 }
 
-@media screen and (max-width:798px){
-  .footer-title{
-font-size: 6px;
+/*ローディング*/
+.loader{
+  position:fixed;
+  top:0;
+  width:100%;
+  height:100%;
+  background-color:rgba(255,255,255,0.95);
+  z-index:10;
+}
+
+.loader-inner{
+  position: absolute;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width:50px;
+  height:100px;
+}
+
+.line{
+  width:8px;
+  position: absolute;
+  border-radius: 5px;
+  bottom:0;
+  left:50%;
+  background:linear-gradient(to top,#f599fa,#45f3d1);
+}
+
+.line1{
+  left:0;
+  animation:loader 0.3s ease alternate infinite;
+}
+
+.line2{
+  left:20px;
+  animation:loader 0.3s 0.2s ease alternate infinite;
+}
+
+.line3{
+  left:40px;
+  animation:loader 0.3s 0.4s ease alternate infinite;
+}
+
+@keyframes loader {
+  0%{
+    height:0;
+  }
+  100%{
+    height:75%;
   }
 }
