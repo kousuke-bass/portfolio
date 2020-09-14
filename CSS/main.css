@@ -402,7 +402,7 @@ margin:0 20px;
   padding:10px 0;
   font-weight: bold;
   color:steelblue;
-  font-family: 'HanziPen TC','Charter',sans-serif;
+  font-family:'HanziPen TC','Charter',sans-serif;
 
 .profill-list li:nth-of-type(1){
   font-size:25px;
@@ -614,7 +614,7 @@ transition:all 0.9s 	ease;
  padding-left:50px;
  padding-top:30px;
  border-bottom:thick double slategray;
-margin-bottom: 50px;
+margin-bottom:20px;
 }
 
 .service1 h2,.service2 h2,.service3 h2{
