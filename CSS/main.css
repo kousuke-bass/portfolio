@@ -401,9 +401,8 @@ margin:0 20px;
   font-size:18px;
   padding:10px 0;
   font-weight: bold;
-  color:white;
-  font-family: 'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','メイリオ',Meiryo,'ＭＳ Ｐゴシック',sans-serif;
-}
+  color:steelblue;
+  font-family: 'HanziPen TC','Charter',sans-serif;
 
 .profill-list li:nth-of-type(1){
   font-size:25px;
