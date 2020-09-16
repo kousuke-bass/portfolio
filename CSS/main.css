@@ -402,7 +402,7 @@ margin:0 20px;
   padding:10px 0;
   font-weight: bold;
   color:black;
-  font-family:'HanziPen TC','Charter',sans-serif;
+font-family: 'TsukuARdGothic-Regular',sans-serif;
 }
 
 .profill-list li:nth-of-type(1){
@@ -633,7 +633,7 @@ display: inline-block;
   line-height: 40px;
   font-size: 19px;
   font-weight: bold;
-  color:slategray;
+  color:#99CCFF;
   text-shadow: 2px 2px 0 white;
   font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
