@@ -51,3 +51,78 @@ $('.close-modal').on('click',function(){
   let show_down =$('.work-show,.modal,.close-modal');
   show_down.removeClass('active');
 });
+
+
+
+//コンテンツを表示
+$(window).scroll(function (){
+  console.log($(this).scrollTop());//スクロールの高さを表示
+    $('.fadein').each(function(){
+        var position = $(this).offset().top;
+        var scroll = $(window).scrollTop();
+        var windowHeight = $(window).height();
+        if (scroll > position - windowHeight + 300){
+          $(this).addClass('active');
+        }
+    });
+});
+
+//ページトップ
+ var topBtn = $('#page-top');   
+    topBtn.hide();
+    //スクロールが100に達したらボタン表示
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 300) {
+            topBtn.fadeIn();
+        } else {
+            topBtn.fadeOut();
+        }
+    });
+    //スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+
+//WorkSLIDER
+//スマホのみ
+  function sliderSetting(){
+
+    var width = $(window).width();
+
+    if(width <= 798){
+        $('.work-image').not('.slick-initialized').slick({
+          centerPadding:'0%',
+          slidesToShow:1,
+          slideToScroll:1,
+          arrows:true,
+          autoplay:true,
+          dots:true,
+          speed:1500,
+          easing:'swing',
+          centerMode:true,
+          infinite:true,
+         prevArrow:'<div class="slide-btn prev-btn"></div>',
+         nextArrow:'<div class="slide-btn next-btn"></div>',
+        });
+    } else {
+        $('.slide.slick-initialized').slick('unslick');
+    }
+}
+
+sliderSetting();
+
+$(window).resize( function() {
+    sliderSetting();
+});
+
+
+  //ローディング
+    $(window).on("load",function(){
+    setTimeout(function(){
+      $('.loader').fadeOut();
+    },300)
+  });
+  });
