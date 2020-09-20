@@ -51,4 +51,3 @@ $('.close-modal').on('click',function(){
   let show_down =$('.work-show,.modal,.close-modal');
   show_down.removeClass('active');
 });
-
