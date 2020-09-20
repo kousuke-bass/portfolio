@@ -147,6 +147,10 @@ opacity:0.7;
  border-bottom: 2px solid black;
 }
 
+.menu-trigger{
+display: none;
+}
+
 
 
 
@@ -183,64 +187,69 @@ position: static;
    border-bottom: 0px;
   }
 
-  /*ハンバーガーメニュー*/
   .menu-trigger{
-    position:absolute;
-    left:5%;
-    top:5%;
-    transform: translateX(-8%);
-    transition: all 0.4s;
-    width:40px;
-    height:30px;
-    z-index:100;
     display: block;
+    position: absolute;
+    top:3%;
+    left:2%;
+    z-index: 100;
+    cursor: pointer;
   }
 
-  .menu-trigger span{
-    display: inline-block;
-    transition: all 0.4s;
-    position:absolute;
-    width:100%;
-    height:4px;
-    background:white;
+
+/* アニメーション */
+@-webkit-keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+@keyframes hvr-pulse {
+  25% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  75% {
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9);
+  }
+}
+
+/* マウスオーバー時 */
+.menu-trigger:hover,.menu-trigger:focus,.menu-trigger:active {
+  -webkit-animation-name: hvr-pulse;
+  animation-name: hvr-pulse;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  cursor: pointer;
+}
+
+  .menu-trigger img{
+    width:70px;
+    height:auto;
   }
 
-  .menu-trigger span:nth-of-type(1){
-    top:0;
+  .menu-trigger p{
+    position: absolute;
+    top:70%;
+    left:18%;
+    color:white;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Hannotate SC','ヒラギノ角ゴシック','Hiragino Sans',sans-serif;
   }
 
-  .menu-trigger span:nth-of-type(2){
-    top:50%;
-    transform: translateY(-50%);
-  }
-
-  .menu-trigger span:nth-of-type(3){
-    bottom:0;
-  }
-
-  /*jsで変更される箇所*/
-  .header-list.is-active{
-  left: 0;
-  }
-
-  .menu-trigger.is-active{
-    position: fixed;
-    top:10%;
-  }
-
-  .menu-trigger.is-active span{
-    background: black;
-  }
-
-  .menu-trigger.is-active span:nth-of-type(1){
-      transform: translateY(12px) rotate(-320deg);
-  }
-  .menu-trigger.is-active span:nth-of-type(2){
-      opacity: 0;
-  }
-  .menu-trigger.is-active span:nth-of-type(3){
-      transform: translateY(-15px) rotate(315deg);
-  }
+.header-list.is-active{
+  left:0;
+}
 }
 
 
@@ -637,11 +646,11 @@ display: inline-block;
   line-height: 40px;
   font-size: 19px;
   font-weight: bold;
-  color:#99CCFF;
-  text-shadow: 2px 2px 0 white;
+  color:#000000;
   font-family: 'ヒラギノ丸ゴ ProN','Hiragino Maru Gothic ProN',sans-serif;
 }
 
+/*text-shadow: 2px 2px 0 white;*/
 
 .service1{
   display:block;
@@ -650,7 +659,7 @@ display: inline-block;
   padding:30px 0;
   position: absolute;
   left:15%;
-  background-image:url("../image/魚のアイコン素材2.png");
+  background-image:url("../image/魚のアイコン素材3.png");
   background-size:300px 300px;
   background-repeat:no-repeat;
   background-position: center;
@@ -664,7 +673,7 @@ display: inline-block;
   padding:30px 0;
   position: absolute;
   right:11%;
-  background-image:url("../image/魚のアイコン素材2.png");
+  background-image:url("../image/魚のアイコン素材3.png");
   background-size:300px 300px;
   background-repeat:no-repeat;
   background-position:center;
@@ -678,7 +687,7 @@ display: inline-block;
   position: absolute;
   top:56%;
   left:35%;
-  background-image:url("../image/魚のアイコン素材2.png");
+  background-image:url("../image/魚のアイコン素材3.png");
   background-size:300px 300px;
   background-repeat:no-repeat;
   background-position: center;
@@ -701,7 +710,7 @@ border-radius: 50px 50px;
 /*サービス　スマホ*/
 @media screen and (max-width:798px){
   .service{
-    height:880px;
+    height:800px;
     margin:20px auto;
 
   }
@@ -713,7 +722,9 @@ border-radius: 50px 50px;
   }
 
   .service p{
-    font-size: 15px;
+    font-size: 18px;
+    padding:10px 0;
+    line-height: 40px;
   }
 
 
@@ -1014,7 +1025,7 @@ font-size: 6px;
 
 #page-top {
     position: fixed;
-    bottom: 25px;
+    bottom: 45px;
     right: 20px;
     text-align: center;
     z-index: 100;
@@ -1037,13 +1048,13 @@ font-size: 6px;
 }
 
 .modal{
-display:none;
+  display: none;
 }
 
 @media screen and (max-width:798px){
 
 .modal{
-  display:block;
+  display: block;
   position: fixed;
   top:0;
   left:-100%;
