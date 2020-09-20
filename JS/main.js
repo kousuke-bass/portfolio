@@ -10,29 +10,35 @@ $(function(){
 $('.header-list li').on('click',function(){
 let click=$(this).attr('id');
 let remove = $('.header-list,.menu-trigger');
+let text = $('.menu-trigger p');
 
 if(click=="about"){
   $(window).scrollTop(profill);
   $(remove).removeClass('is-active');
+  $(text).text('MENU');
 }
 else if (click=="skills") {
   $(window).scrollTop(skill);
   $(remove).removeClass('is-active');
+  $(text).text('MENU');
 
 }
 else if (click=="service") {
   $(window).scrollTop(services);
   $(remove).removeClass('is-active');
+  $(text).text('MENU');
 
 }
 else if (click=="works") {
   $(window).scrollTop(works);
   $(remove).removeClass('is-active');
+  $(text).text('MENU');
 
 }
 else if (click=="contact") {
   $(window).scrollTop(contacts);
   $(remove).removeClass('is-active');
+  $(text).text('MENU');
 }
 });
 
@@ -40,6 +46,14 @@ else if (click=="contact") {
 $('.menu-trigger').on('click',function(){
   $('.menu-trigger').toggleClass('is-active');
   $('.header-list').toggleClass('is-active');
+
+  let header=$('.menu-trigger').hasClass('is-active');
+  if(header){
+    $('.menu-trigger p').text('CLOSE');
+  }else{
+    $('.menu-trigger p').text('MENU');
+
+  }
 });
 
 $('.work-show').on('click',function(){
