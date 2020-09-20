@@ -1036,9 +1036,14 @@ font-size: 6px;
     transform:rotate(90deg);
 }
 
+.modal{
+display:none;
+}
+
 @media screen and (max-width:798px){
 
 .modal{
+  display:block;
   position: fixed;
   top:0;
   left:-100%;
