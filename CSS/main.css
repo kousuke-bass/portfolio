@@ -842,15 +842,15 @@ text-align:center;
     right:3%;
     width:60px;
     height:auto;
-    font-size: 15px;
-    font-family: 'HanziPen SC',sans-serif;
+    font-size: 13px;
     font-weight: bold;
+    font-family: 'Hiragino Kaku Gothic ProN','ヒラギノ角ゴ ProN W3',sans-serif;
     display: inline-block;
-    padding:10px 10px;
+    padding:10px 5px;
     border: 2px solid black;
-    margin-left: 30px;
-     margin-bottom:20px;
-     cursor: pointer;]
+    margin-left: 20px;
+    margin-bottom:20px;
+    cursor: pointer;]
 
   }
 
@@ -1042,7 +1042,7 @@ font-size: 6px;
     text-align: center;
 }
 
-#page-top a:hover {
+#page-top:hover {
    opacity: 0.9;
     transform:rotate(90deg);
 }
