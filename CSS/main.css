@@ -791,6 +791,10 @@ transition:all 0.9s ease;
  border-bottom:thick double slategray;
 }
 
+.work-show{
+  display:none;
+  }
+
 
 .work-image{
   width:100%;
