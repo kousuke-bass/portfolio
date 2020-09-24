@@ -66,6 +66,13 @@ $('.close-modal').on('click',function(){
   show_down.removeClass('active');
 });
 
+$('.keireki-btn').on('click',function(){
+  $('.keireki').toggleClass('active');
+});
+$('.keireki').on('click',function(){
+  $('.keireki').removeClass('active');
+
+});
 
 
 //コンテンツを表示
