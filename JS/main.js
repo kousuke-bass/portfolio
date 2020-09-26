@@ -70,7 +70,7 @@ $('.work-show').on('click',function(){
   $('.modal,.close-modal').toggleClass('active');
 });
 
-$('.close-modal').on('click',function(){
+$('.close-modal,.modal').on('click',function(){
   let show_down =$('.work-show,.modal,.close-modal');
   show_down.removeClass('active');
 });
