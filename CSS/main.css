@@ -139,7 +139,7 @@ background-size: contain;
   width:900px;
   position: absolute;
   bottom:5%;
-  left:20%;
+  left:15%;
   display: flex;
   justify-content: space-between;
  align-items: center;
@@ -363,7 +363,7 @@ border-bottom:thick double slategray;
 }
 
 .profill-image img{
-  width:35%;
+  width:32%;
   height:auto;
 }
 
@@ -382,7 +382,7 @@ left:0;
  height:600px;
  opacity:0.5;
  position: absolute;
- top:-5%;
+ top:-3%;
  left:0;
  z-index:-1;
  border-radius: 20px 20px;
@@ -391,7 +391,7 @@ left:0;
 /* sns*/
 /* アイコンをど真ん中に*/
 .flowbtn5 i{
-font-size:1.6em;
+font-size:3em;
 color:#000033;
 }
 
@@ -417,12 +417,12 @@ margin:20px 0px;
 
 /* アイコンボタン同士の余白調整 */
 .snsbtniti a{
-flex:0 0 15%;
+flex:0 0 10%;
 text-align:center!important;
 }
 
 .profill h2{
-  font-size:25px;
+  font-size:45px;
   padding:10px 0;
   font-weight: bold;
   color:black;
@@ -438,7 +438,7 @@ margin:0 20px;
   font-size:18px;
   padding:10px 0;
   font-weight: bold;
-  color:white;
+  color:black;
 font-family: 'TsukuARdGothic-Regular',sans-serif;
 }
 
