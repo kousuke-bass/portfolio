@@ -183,7 +183,7 @@ position: static;
     background-color:rgb(245,245,245,0.9);
     padding:0 0;
     display:inline-block;
-    padding: 90px 0;
+    padding: 120px 0;
     position:fixed;
     top:0;
     left:-100%;
@@ -194,7 +194,7 @@ position: static;
 
   .header-list li {
       color:black;
-      padding:30px 0;
+      padding:15px 0;
   }
 
   .header-list li:hover{
@@ -323,6 +323,11 @@ font-family: 'Noteworthy',sans-serif;
 
   .top-text p{
     font-size:20px;
+  }
+
+  .top .fa-angle-double-down{
+    font-size: 80px;
+    margin-top: 20px;
   }
 }
 
@@ -467,7 +472,8 @@ font-family: 'TsukuARdGothic-Regular',sans-serif;
 /*プロフィール スマホ*/
 @media screen and (max-width:798px){
   .profill{
-    height:680px;
+    height:700px;
+    margin: 80px 0;
   }
 
   .profill h1{
@@ -535,7 +541,7 @@ font-family: 'TsukuARdGothic-Regular',sans-serif;
     background-image: url("../image/c0tJIkgLUboQZbd1600922584_1600922610.png");
     background-size: contain;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position:bottom;
     background-color:rgb(220,220,220,0.9);
     transition: all 0.7s;
   }
@@ -564,15 +570,17 @@ font-family: 'TsukuARdGothic-Regular',sans-serif;
 
 
   .keireki-list h1{
-    font-size:16px;
+    font-size:32px;
     padding:10px 40px;
+    margin: 30px 0;
     color:black;
     background-color:transparent;
   }
 
-  .keireki-list{
-    font-size:18px;
-    margin: 30px 0;
+  .keireki-list p{
+    font-size:16px;
+    margin: 50px 0;
+    font-weight: bold;
   }
 
 }
@@ -682,7 +690,7 @@ align-self: center;
 
 /*サービス*/
 .service{
-  margin:50px 0;
+  margin:80px 0;
   text-align: center;
   position: relative;
   top:0;
@@ -796,7 +804,7 @@ border-radius: 50px 50px;
 /*サービス　スマホ*/
 @media screen and (max-width:798px){
   .service{
-    height:930px;
+    height:1000px;
     margin:20px auto;
 
   }
@@ -804,7 +812,7 @@ border-radius: 50px 50px;
   .service h1{
     text-align:center;
     padding: 0 0;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
   }
 
   .service h2{
@@ -847,9 +855,9 @@ border-radius: 50px 50px;
 
   .service-back-image{
     width:100%;
-    height:100%;
+    height:95%;
     position: absolute;
-    top:9%;
+    top:8%;
     left:0;
   }
 }
@@ -913,7 +921,7 @@ text-align:center;
 
 @media screen and (max-width:798px){
   .work{
-    margin:50px 0;
+    margin:100px 0;
     margin-top: 120px;
     position: relative;
   }
