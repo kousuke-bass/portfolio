@@ -52,10 +52,19 @@ $('.menu-trigger').on('click',function(){
     $('.menu-trigger p').text('CLOSE');
   }else{
     $('.menu-trigger p').text('MENU');
-
   }
 });
 
+$('.header-list').on('click',function(){
+  $('.header-list,.menu-trigger').removeClass('is-active');
+  let header=$('.menu-trigger').hasClass('is-active');
+  if(header){
+    $('.menu-trigger p').text('CLOSE');
+  }else{
+    $('.menu-trigger p').text('MENU');
+  }
+});
+//動画一覧表示
 $('.work-show').on('click',function(){
   $('.work-show').toggleClass('active');
   $('.modal,.close-modal').toggleClass('active');
@@ -66,6 +75,7 @@ $('.close-modal').on('click',function(){
   show_down.removeClass('active');
 });
 
+//経歴表示
 $('.keireki-btn').on('click',function(){
   $('.keireki').toggleClass('active');
 });
