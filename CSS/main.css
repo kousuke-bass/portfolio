@@ -278,6 +278,11 @@ position: static;
   top:0;
   left:0;
   margin-bottom:50px;
+  animation-name: ▲▲▲▲;
+   animation-timing-function: ease-in-out;
+   animation-iteration-count: infinite;
+   animation-direction: alternate;
+   animation-duration: 1.5s;
 }
 
 .top-text{
@@ -300,6 +305,21 @@ font-family: 'Noteworthy',sans-serif;
 .top-text p{
   font-size:40px;
   font-weight: bold;
+}
+
+.top .fa-angle-double-down{
+  font-size: 80px;
+  margin-top: 20px;
+}
+
+@keyframes ▲▲▲▲ {
+    0% {
+        transform: translate(0,0px);
+    }
+
+    100% {
+        transform: translate(0,-15px)
+    }
 }
 
 /*TOP スマホ*/
@@ -571,23 +591,6 @@ font-family: 'TsukuARdGothic-Regular',sans-serif;
     font-size: 20px;
     cursor: pointer;
     position: relative;
-  }
-
-.keireki-click{
-  padding:10px 0;
-  position: absolute;
-  top:0;
-  left:0;
-  width:100%;
-  height:100%;
-  background-color: rgb(135,206,235);
-  opacity: 0;
-transition: all 0.4s;
-}
-
-
-  .keireki-click:hover{
-    opacity:1;
   }
 
 
@@ -961,7 +964,7 @@ text-align:center;
     position: absolute;
     top:2%;
     right:3%;
-    width:60px;
+    width:80px;
     height:auto;
     font-size: 10px;
     font-weight: bold;
@@ -980,23 +983,6 @@ text-align:center;
       background-color:#B0C4DE;
       opacity: 0.6;
     }
-
-    .work-click{
-      padding:10px 0;
-      position: absolute;
-      top:0;
-      left:0;
-      width:100%;
-      height:100%;
-      background-color: rgb(135,206,235);
-      opacity: 0;
-    transition: all 0.4s;
-    }
-
-
-      .work-click:hover{
-        opacity:1;
-      }
 
   .work img{
     width:100%;
