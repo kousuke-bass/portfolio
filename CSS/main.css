@@ -764,7 +764,7 @@ display: inline-block;
 .service p{
   padding:10px 20px;
   line-height: 40px;
-  font-size: 19px;
+  font-size: 12px;
   font-weight: bold;
   color:#000000;
 font-family: 'Hannotate SC','HanziPen TC',sans-serif;
@@ -876,7 +876,7 @@ border-radius: 50px 50px;
 
   .service1{
     position: static;
-    width:320px;
+    width:350px;
     height:300px;
     padding:20px 0;
     display: inline-block;
@@ -886,8 +886,8 @@ border-radius: 50px 50px;
 
   .service2{
     position: static;
-    width:320px;
-    height:300px;
+    width:350px;
+    height:430px;
     padding:20px 0;
     margin: 20px 0;
     display: inline-block;
@@ -895,16 +895,16 @@ border-radius: 50px 50px;
 
   .service3{
     position: static;
-    width:320px;
-    height:280px;
+    width:350px;
+    height:330px;
     padding:20px 0;
     display: inline-block;
   }
 
   .service4{
     position: static;
-    width:320px;
-    height:280px;
+    width:350px;
+    height:350px;
     padding:20px 0;
     display: inline-block;
     margin-top: 20px;
