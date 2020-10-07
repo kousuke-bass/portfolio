@@ -768,7 +768,7 @@ display: inline-block;
 .service p{
   padding:10px 20px;
   line-height: 40px;
-  font-size: 12px;
+  font-size: 13px;
   font-weight: bold;
   color:#000000;
 font-family: 'Hannotate SC','HanziPen TC',sans-serif;
@@ -797,7 +797,7 @@ background-image:url("../image/魚のアイコン素材3.png");
   border:2px solid black;
   border-radius: 40px 40px;
   position: absolute;
-  left:15%;
+  left:10%;
 }
 
 
@@ -810,7 +810,7 @@ background-image:url("../image/魚のアイコン素材3.png");
   border:2px solid black;
   border-radius: 40px 40px;
   position: absolute;
-  right:11%;
+  right:10%;
 }
 
 .service3{
@@ -823,7 +823,7 @@ background-image:url("../image/魚のアイコン素材3.png");
   border-radius: 40px 40px;
   position: absolute;
   top:63%;
-  left:15%;
+  left:10%;
 }
 
 .service4{
@@ -836,7 +836,7 @@ background-image:url("../image/魚のアイコン素材3.png");
   border-radius: 40px 40px;
   position: absolute;
   top:63%;
-  right:11%;
+  right:10%;
 }
 
 .service-back-image{
